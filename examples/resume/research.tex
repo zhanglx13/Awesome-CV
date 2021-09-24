@@ -11,12 +11,29 @@
 % ---------------------------------------------------------
   \cvresearchentry
   {Implementation of Monte Carlo Localization on Heterogeneous Systems} % title
-  {Jan. 2021 - Aug. 2021} % date
+  {May. 2021 - Aug. 2021} % date
   {% description
     \begin{cvitems}
-    \item Implemented the Monte Carlo Localization algorithm using CUDA on Jetson TX2.
-    \item Developed a framework for distributing particles among heterogeneous
-      computing resources to accelerate the localization process.
+    \item Implemented the Monte Carlo Localization algorithm in CUDA.
+    \item Partitioned the particles among multiple threads: one launches the
+      GPU kernel and others run on CPU in a multi-threaded manner.
+    \item Mutex and condition variables were used to synchronize between threads.
+    \item Simulated the localization of the f1tenth autonomous car system using ROS.
+    \end{cvitems}
+  }
+
+% ---------------------------------------------------------
+  \cvresearchentry
+  {Implementation of Particle Filter on Heterogeneous Systems} % title
+  {Jan. 2021 - Apr. 2021} % date
+  {% description
+    \begin{cvitems}
+    \item Partitioned the particles among two processes: one runs on CPU and the
+      other launches the GPU kernel.
+    \item POSIX shared memory and System V semaphore were used to communicate and
+      synchronize between the two processes.
+    \item Conducted experiments on NVIDIA GTX TITAN and Jetson TX2 to obtain the
+      optimal partition among CPU and GPU.
     \end{cvitems}
   }
 
@@ -26,11 +43,9 @@
   {Jan. 2019 - Dec. 2020} % date
   {% description
     \begin{cvitems}
-    \item Conducted a comprehensive literature review of GPU architecture and
-      GPU performance models, through which obtained a deep knowledge of GPU
-      execution model and architecture.
     \item Developed a mathematical model to estimate the execution time of simple
-      kernels based on static analysis of CUDA assembly code.
+      kernels based on static analysis of CUDA assembly code and knowledge of GPU
+      architecture.
     \end{cvitems}
   }
 
@@ -40,9 +55,12 @@
   {Sep. 2016 - Aug. 2017} % date
   {% description
     \begin{cvitems}
-    \item Built an automatic laser power control system to eliminate thermal
+    \item Achieved motion detection of galvanometer
+      by comparing two consecutive images taken by infrared cameras in LabVIEW.
+    \item Built an automatic laser power control system at both vector-level
+      and layer-level control granularity to eliminate thermal
       gradients in the post-sintering temperature on the Laser Additive
-      Manufacturing Pilot System.
+      Manufacturing Pilot System at the department of mechanical engineering.
     \end{cvitems}
   }
 
@@ -61,11 +79,13 @@
 
 % ---------------------------------------------------------
   \cvresearchentry
-  {CUDA Implementation of Particle Filter Applications} % title
+  {CUDA Implementation of Particle Filter for Real World Applications} % title
   {Jun. 2013 - Aug. 2014} % date
   {% description
     \begin{cvitems}
-    \item 
+    \item Applications include Vacuum Arc Remelting and Early Kick Detection.
+    \item Implemented sampling, importance, and resampling modules in CUDA.
+    \item Analyzed and improved GPU kernel performance through profiling.
     \end{cvitems}
   }
 
