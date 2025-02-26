@@ -11,16 +11,18 @@
 
 %---------------------------------------------------------
   \cventry
-    {Compiler Engineer} % Job title
+    {SMTS Software Development Engineer} % Job title
     {Advanced Micro Devices, Inc.} % Organization
     {Austin, Texas} % Location
     {May. 2022 - current} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-      \item {Supporting OpenAI Triton on AMD GPUs.}
-      \item {Studied the factors affecting verification errors for convolution end-to-end tests with fp16 data type.}
-      \item {Improved CI infrastructure for multi-arch testing.}
-      \item {Developed an automation framework to generate convolution end-to-end tests.}
+      \item {Performance analysis and optimization for various customer Triton kernels used in popular AI models,
+          such as OpenAI proxy model, Meta HSTU kernel, Alibaba MOE kernel, and DeepSeek MLA kernel.}
+      \item {Maintenance of AMD backend in OpenAI Triton github repository.}
+      \item {Development of tune\_gemm, a tuning script for Triton gemm kernels.}
+      \item {Development of Triton layout visualization tool.}
+      \item {Improved multi-arch testing CI infrastructure for rocMLIR project.}
       \end{cvitems}
     }
 
@@ -32,11 +34,7 @@
     {Jun. 2016 - Aug. 2016} % Date(s)
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
-      \item Developed a C++ pass to analyze for loops in the IR to find loop invariant
-        variables.
-      \item Generated intrinsic functions which expand to OpenMP pragmas in the code
-        generation phase.
-      \item Performed timing experiments of the generated code on multi-core systems.
+      \item Developed a C++ compiler pass to generate efficient code for multi-core systems.
       \end{cvitems}
     }
 
